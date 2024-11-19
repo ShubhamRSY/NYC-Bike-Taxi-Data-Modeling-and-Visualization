@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_76f29795e97cac6c019cb837d491f8c3 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_76f29795e97cac6c019cb837d491f8c3" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_76f29795e97cac6c019cb837d491f8c3 = L.map(
+                "map_76f29795e97cac6c019cb837d491f8c3",
+                {
+                    center: [40.7128, -74.006],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_86959319f13b7a96d7821efda1d75041 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_86959319f13b7a96d7821efda1d75041.addTo(map_76f29795e97cac6c019cb837d491f8c3);
+        
+    
+            var marker_cluster_ff3e21223987e7572d36eb3fc9de7ac4 = L.markerClusterGroup(
+                {}
+            );
+        
+    
+            var circle_marker_0c33eeb89fee688044d16bb13ae5915b = L.circleMarker(
+                [40.71911552, -74.00666661],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 57.167, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ff3e21223987e7572d36eb3fc9de7ac4);
+        
+    
+            circle_marker_0c33eeb89fee688044d16bb13ae5915b.bindTooltip(
+                `<div>
+                     Zone: East Village<br>Borough: Manhattan<br>Total Taxi Activity: 104334.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6e66bee33fed5aaf0936bc06992e0f7c = L.circleMarker(
+                [40.71117416, -74.00016545],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.5225, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ff3e21223987e7572d36eb3fc9de7ac4);
+        
+    
+            circle_marker_6e66bee33fed5aaf0936bc06992e0f7c.bindTooltip(
+                `<div>
+                     Zone: Elmhurst<br>Borough: Queens<br>Total Taxi Activity: 5045.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_c14ce67cd15fbdc2b068642f07c80780 = L.circleMarker(
+                [40.69239502, -73.99337909],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 36.3525, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ff3e21223987e7572d36eb3fc9de7ac4);
+        
+    
+            circle_marker_c14ce67cd15fbdc2b068642f07c80780.bindTooltip(
+                `<div>
+                     Zone: Lincoln Square West<br>Borough: Manhattan<br>Total Taxi Activity: 62705.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_65c5da0fbadc8301f1f4c4a2767ac5d4 = L.circleMarker(
+                [40.69839895, -73.98068914],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 31.611, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ff3e21223987e7572d36eb3fc9de7ac4);
+        
+    
+            circle_marker_65c5da0fbadc8301f1f4c4a2767ac5d4.bindTooltip(
+                `<div>
+                     Zone: Little Italy/NoLiTa<br>Borough: Manhattan<br>Total Taxi Activity: 53222.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_3f1938e7830c7dfa91ce994c21445952 = L.circleMarker(
+                [40.72210379, -73.99724901],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 26.378, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ff3e21223987e7572d36eb3fc9de7ac4);
+        
+    
+            circle_marker_3f1938e7830c7dfa91ce994c21445952.bindTooltip(
+                `<div>
+                     Zone: Manhattan Valley<br>Borough: Manhattan<br>Total Taxi Activity: 42756.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_89a1f0798fa41917e9861145be60a833 = L.circleMarker(
+                [40.72917025, -73.99810231],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 132.86450000000002, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ff3e21223987e7572d36eb3fc9de7ac4);
+        
+    
+            circle_marker_89a1f0798fa41917e9861145be60a833.bindTooltip(
+                `<div>
+                     Zone: Midtown Center<br>Borough: Manhattan<br>Total Taxi Activity: 255729.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_c795b3e5fef9d7f2442b1593b623f029 = L.circleMarker(
+                [40.75323098, -73.97032517],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 69.3155, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ff3e21223987e7572d36eb3fc9de7ac4);
+        
+    
+            circle_marker_c795b3e5fef9d7f2442b1593b623f029.bindTooltip(
+                `<div>
+                     Zone: Midtown South<br>Borough: Manhattan<br>Total Taxi Activity: 128631.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_7c33f7bf897e85ac435bf553a76b0f51 = L.circleMarker(
+                [40.70037867, -73.99548059],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.575, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ff3e21223987e7572d36eb3fc9de7ac4);
+        
+    
+            circle_marker_7c33f7bf897e85ac435bf553a76b0f51.bindTooltip(
+                `<div>
+                     Zone: South Ozone Park<br>Borough: Queens<br>Total Taxi Activity: 5150.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_c39bcc855cf664827a00beb15571324e = L.circleMarker(
+                [40.71146364, -74.00552427],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.59, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ff3e21223987e7572d36eb3fc9de7ac4);
+        
+    
+            circle_marker_c39bcc855cf664827a00beb15571324e.bindTooltip(
+                `<div>
+                     Zone: Stuy Town/Peter Cooper Village<br>Borough: Manhattan<br>Total Taxi Activity: 13180.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_c876df82e1aedebb7223f5b62b073178 = L.circleMarker(
+                [40.72743423, -73.99379025],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 58.501, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ff3e21223987e7572d36eb3fc9de7ac4);
+        
+    
+            circle_marker_c876df82e1aedebb7223f5b62b073178.bindTooltip(
+                `<div>
+                     Zone: Sutton Place/Turtle Bay North<br>Borough: Manhattan<br>Total Taxi Activity: 107002.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_c97daf439095141753a670fe6b153238 = L.circleMarker(
+                [40.7284186, -73.98713956],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 109.543, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ff3e21223987e7572d36eb3fc9de7ac4);
+        
+    
+            circle_marker_c97daf439095141753a670fe6b153238.bindTooltip(
+                `<div>
+                     Zone: Upper East Side North<br>Borough: Manhattan<br>Total Taxi Activity: 209086.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_3cb21db4dfd61dc31bd945882c2146f8 = L.circleMarker(
+                [40.73047309, -73.98672378],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 118.645, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ff3e21223987e7572d36eb3fc9de7ac4);
+        
+    
+            circle_marker_3cb21db4dfd61dc31bd945882c2146f8.bindTooltip(
+                `<div>
+                     Zone: Upper East Side South<br>Borough: Manhattan<br>Total Taxi Activity: 227290.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_53c5332209ab5ee9532c675fe7bf8343 = L.circleMarker(
+                [40.7361967, -74.00859207],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 54.6605, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ff3e21223987e7572d36eb3fc9de7ac4);
+        
+    
+            circle_marker_53c5332209ab5ee9532c675fe7bf8343.bindTooltip(
+                `<div>
+                     Zone: Upper West Side North<br>Borough: Manhattan<br>Total Taxi Activity: 99321.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a560bb7484bd772c3dca01670efe7c3f = L.circleMarker(
+                [40.69196566, -73.9813018],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 74.8365, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ff3e21223987e7572d36eb3fc9de7ac4);
+        
+    
+            circle_marker_a560bb7484bd772c3dca01670efe7c3f.bindTooltip(
+                `<div>
+                     Zone: Upper West Side South<br>Borough: Manhattan<br>Total Taxi Activity: 139673.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a12b163fe821d4ef07b85186f183b26b = L.circleMarker(
+                [40.688226, -73.979382],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.515499999999999, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ff3e21223987e7572d36eb3fc9de7ac4);
+        
+    
+            circle_marker_a12b163fe821d4ef07b85186f183b26b.bindTooltip(
+                `<div>
+                     Zone: Washington Heights North<br>Borough: Manhattan<br>Total Taxi Activity: 5031.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a9d3ba1f7a07a1dfb11d94d388cc201d = L.circleMarker(
+                [40.69196035, -73.96536851],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.1165, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ff3e21223987e7572d36eb3fc9de7ac4);
+        
+    
+            circle_marker_a9d3ba1f7a07a1dfb11d94d388cc201d.bindTooltip(
+                `<div>
+                     Zone: Washington Heights South<br>Borough: Manhattan<br>Total Taxi Activity: 10233.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a052ffe6f0fd9cbb76c2cb84f9eb74a8 = L.circleMarker(
+                [40.71870987, -74.0090009],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 56.46, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ff3e21223987e7572d36eb3fc9de7ac4);
+        
+    
+            circle_marker_a052ffe6f0fd9cbb76c2cb84f9eb74a8.bindTooltip(
+                `<div>
+                     Zone: West Village<br>Borough: Manhattan<br>Total Taxi Activity: 102920.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_5724b5d835542e9b7d09ad11c486a33a = L.circleMarker(
+                [40.69474881, -73.98362464],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20.423000000000002, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ff3e21223987e7572d36eb3fc9de7ac4);
+        
+    
+            circle_marker_5724b5d835542e9b7d09ad11c486a33a.bindTooltip(
+                `<div>
+                     Zone: World Trade Center<br>Borough: Manhattan<br>Total Taxi Activity: 30846.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_67401b7c95a04b425f6a35d3df9b9218 = L.circleMarker(
+                [40.6917823, -73.9737299],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 39.4965, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ff3e21223987e7572d36eb3fc9de7ac4);
+        
+    
+            circle_marker_67401b7c95a04b425f6a35d3df9b9218.bindTooltip(
+                `<div>
+                     Zone: Yorkville East<br>Borough: Manhattan<br>Total Taxi Activity: 68993.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_87a9ffcc8ea4e4d6312b92398e6f212c = L.circleMarker(
+                [40.70706456, -74.00731853],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.6985, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ff3e21223987e7572d36eb3fc9de7ac4);
+        
+    
+            circle_marker_87a9ffcc8ea4e4d6312b92398e6f212c.bindTooltip(
+                `<div>
+                     Zone: nan<br>Borough: nan<br>Total Taxi Activity: 19397.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6c45556c58a6a7ecca7c7d0b656098a3 = L.circleMarker(
+                [40.72229346, -73.99147535],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.5135, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ff3e21223987e7572d36eb3fc9de7ac4);
+        
+    
+            circle_marker_6c45556c58a6a7ecca7c7d0b656098a3.bindTooltip(
+                `<div>
+                     Zone: nan<br>Borough: nan<br>Total Taxi Activity: 17027.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            marker_cluster_ff3e21223987e7572d36eb3fc9de7ac4.addTo(map_76f29795e97cac6c019cb837d491f8c3);
+        
+    
+            var marker_cluster_5b16161b8a2265443b91db5b5bdf83da = L.markerClusterGroup(
+                {}
+            );
+        
+    
+            var marker_e322d8cb29dc43947a12d7520cbffdee = L.marker(
+                [40.71911552, -74.00666661],
+                {}
+            ).addTo(marker_cluster_5b16161b8a2265443b91db5b5bdf83da);
+        
+    
+            var icon_6ec873a1f2651131930ef72d9858b9e8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_e322d8cb29dc43947a12d7520cbffdee.setIcon(icon_6ec873a1f2651131930ef72d9858b9e8);
+        
+    
+            marker_e322d8cb29dc43947a12d7520cbffdee.bindTooltip(
+                `<div>
+                     Station: Franklin St & W Broadway<br>Capacity: 33.0<br>Coordinates: (40.71911552, -74.00666661)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_68f8c664aaeb26d31be316cad856e54a = L.marker(
+                [40.71117416, -74.00016545],
+                {}
+            ).addTo(marker_cluster_5b16161b8a2265443b91db5b5bdf83da);
+        
+    
+            var icon_41723de7e3c4726feeb92c3bff3b4e3e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_68f8c664aaeb26d31be316cad856e54a.setIcon(icon_41723de7e3c4726feeb92c3bff3b4e3e);
+        
+    
+            marker_68f8c664aaeb26d31be316cad856e54a.bindTooltip(
+                `<div>
+                     Station: St James Pl & Pearl St<br>Capacity: 27.0<br>Coordinates: (40.71117416, -74.00016545)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3097622bd2156e726954b1e3ddffa2a9 = L.marker(
+                [40.69239502, -73.99337909],
+                {}
+            ).addTo(marker_cluster_5b16161b8a2265443b91db5b5bdf83da);
+        
+    
+            var icon_997b557326d04fa60285b1508f283f38 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_3097622bd2156e726954b1e3ddffa2a9.setIcon(icon_997b557326d04fa60285b1508f283f38);
+        
+    
+            marker_3097622bd2156e726954b1e3ddffa2a9.bindTooltip(
+                `<div>
+                     Station: Clinton St & Joralemon St<br>Capacity: 24.0<br>Coordinates: (40.69239502, -73.99337909)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e473655b2c8023ccaafeb4c63c205955 = L.marker(
+                [40.69839895, -73.98068914],
+                {}
+            ).addTo(marker_cluster_5b16161b8a2265443b91db5b5bdf83da);
+        
+    
+            var icon_40569b1b3c89a692c1aa1720210eb343 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_e473655b2c8023ccaafeb4c63c205955.setIcon(icon_40569b1b3c89a692c1aa1720210eb343);
+        
+    
+            marker_e473655b2c8023ccaafeb4c63c205955.bindTooltip(
+                `<div>
+                     Station: Nassau St & Navy St<br>Capacity: 19.0<br>Coordinates: (40.69839895, -73.98068914)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b940d8053690249ffe9588a05d1f674d = L.marker(
+                [40.72210379, -73.99724901],
+                {}
+            ).addTo(marker_cluster_5b16161b8a2265443b91db5b5bdf83da);
+        
+    
+            var icon_2713cae11920db55b0bfd1af4afd9bac = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b940d8053690249ffe9588a05d1f674d.setIcon(icon_2713cae11920db55b0bfd1af4afd9bac);
+        
+    
+            marker_b940d8053690249ffe9588a05d1f674d.bindTooltip(
+                `<div>
+                     Station: Cleveland Pl & Spring St<br>Capacity: 33.0<br>Coordinates: (40.72210379, -73.99724901)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8ee3e0109f7d70070bb0d7c47518a398 = L.marker(
+                [40.72917025, -73.99810231],
+                {}
+            ).addTo(marker_cluster_5b16161b8a2265443b91db5b5bdf83da);
+        
+    
+            var icon_c2844c16e3a9ec1cf933db3de67711db = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_8ee3e0109f7d70070bb0d7c47518a398.setIcon(icon_c2844c16e3a9ec1cf933db3de67711db);
+        
+    
+            marker_8ee3e0109f7d70070bb0d7c47518a398.bindTooltip(
+                `<div>
+                     Station: LaGuardia Pl & W 3 St<br>Capacity: 35.0<br>Coordinates: (40.72917025, -73.99810231)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_eac3ad3c48f2d18384a4ede6e34391df = L.marker(
+                [40.75323098, -73.97032517],
+                {}
+            ).addTo(marker_cluster_5b16161b8a2265443b91db5b5bdf83da);
+        
+    
+            var icon_9458964a3ad04a65890535ad5ec30342 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_eac3ad3c48f2d18384a4ede6e34391df.setIcon(icon_9458964a3ad04a65890535ad5ec30342);
+        
+    
+            marker_eac3ad3c48f2d18384a4ede6e34391df.bindTooltip(
+                `<div>
+                     Station: E 47 St & 2 Ave<br>Capacity: 47.0<br>Coordinates: (40.75323098, -73.97032517)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_86a86bd7b8e0323a3b3a8bbe1e73c71d = L.marker(
+                [40.70037867, -73.99548059],
+                {}
+            ).addTo(marker_cluster_5b16161b8a2265443b91db5b5bdf83da);
+        
+    
+            var icon_73c3ee6f13c92d4c4aea803d1823339a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_86a86bd7b8e0323a3b3a8bbe1e73c71d.setIcon(icon_73c3ee6f13c92d4c4aea803d1823339a);
+        
+    
+            marker_86a86bd7b8e0323a3b3a8bbe1e73c71d.bindTooltip(
+                `<div>
+                     Station: Columbia Heights & Cranberry St<br>Capacity: 23.0<br>Coordinates: (40.70037867, -73.99548059)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2c93e4a375bbde46681a3eaf48fde41b = L.marker(
+                [40.71146364, -74.00552427],
+                {}
+            ).addTo(marker_cluster_5b16161b8a2265443b91db5b5bdf83da);
+        
+    
+            var icon_4722180936247179df8157bfbbe68e35 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_2c93e4a375bbde46681a3eaf48fde41b.setIcon(icon_4722180936247179df8157bfbbe68e35);
+        
+    
+            marker_2c93e4a375bbde46681a3eaf48fde41b.bindTooltip(
+                `<div>
+                     Station: Spruce St & Nassau St<br>Capacity: 31.0<br>Coordinates: (40.71146364, -74.00552427)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_866f82cdab71633b84eb215ca32de71a = L.marker(
+                [40.72743423, -73.99379025],
+                {}
+            ).addTo(marker_cluster_5b16161b8a2265443b91db5b5bdf83da);
+        
+    
+            var icon_8af72c792778c69e7abcee53b03febfd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_866f82cdab71633b84eb215ca32de71a.setIcon(icon_8af72c792778c69e7abcee53b03febfd);
+        
+    
+            marker_866f82cdab71633b84eb215ca32de71a.bindTooltip(
+                `<div>
+                     Station: Great Jones St<br>Capacity: 23.0<br>Coordinates: (40.72743423, -73.99379025)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d47ed3d9aa93a577c872d462cc1394fa = L.marker(
+                [40.7284186, -73.98713956],
+                {}
+            ).addTo(marker_cluster_5b16161b8a2265443b91db5b5bdf83da);
+        
+    
+            var icon_e74dd494fb6e8e32d0e5d96e08696e28 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_d47ed3d9aa93a577c872d462cc1394fa.setIcon(icon_e74dd494fb6e8e32d0e5d96e08696e28);
+        
+    
+            marker_d47ed3d9aa93a577c872d462cc1394fa.bindTooltip(
+                `<div>
+                     Station: St Marks Pl & 2 Ave<br>Capacity: 47.0<br>Coordinates: (40.7284186, -73.98713956)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d62317ed5fcc1a4a7f1349096f42ab80 = L.marker(
+                [40.73047309, -73.98672378],
+                {}
+            ).addTo(marker_cluster_5b16161b8a2265443b91db5b5bdf83da);
+        
+    
+            var icon_ca25fa36216fc914a55e903477f09bae = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_d62317ed5fcc1a4a7f1349096f42ab80.setIcon(icon_ca25fa36216fc914a55e903477f09bae);
+        
+    
+            marker_d62317ed5fcc1a4a7f1349096f42ab80.bindTooltip(
+                `<div>
+                     Station: E 11 St & 2 Ave<br>Capacity: 27.0<br>Coordinates: (40.73047309, -73.98672378)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_fe43b104d34e303d0208f3796087a2df = L.marker(
+                [40.7361967, -74.00859207],
+                {}
+            ).addTo(marker_cluster_5b16161b8a2265443b91db5b5bdf83da);
+        
+    
+            var icon_e15ece8019552988970231eb842bf95d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_fe43b104d34e303d0208f3796087a2df.setIcon(icon_e15ece8019552988970231eb842bf95d);
+        
+    
+            marker_fe43b104d34e303d0208f3796087a2df.bindTooltip(
+                `<div>
+                     Station: Bank St & Washington St<br>Capacity: 31.0<br>Coordinates: (40.7361967, -74.00859207)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9294f0d2406bfb87bfdcdab2aca275e5 = L.marker(
+                [40.69196566, -73.9813018],
+                {}
+            ).addTo(marker_cluster_5b16161b8a2265443b91db5b5bdf83da);
+        
+    
+            var icon_bb52f0e4b9fe81ae67c5f25f97564a68 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_9294f0d2406bfb87bfdcdab2aca275e5.setIcon(icon_bb52f0e4b9fe81ae67c5f25f97564a68);
+        
+    
+            marker_9294f0d2406bfb87bfdcdab2aca275e5.bindTooltip(
+                `<div>
+                     Station: Willoughby St & Fleet St<br>Capacity: 31.0<br>Coordinates: (40.69196566, -73.9813018)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1f2d0c10e5a7b295b7beb83ee7e13b97 = L.marker(
+                [40.688226, -73.979382],
+                {}
+            ).addTo(marker_cluster_5b16161b8a2265443b91db5b5bdf83da);
+        
+    
+            var icon_32262dfaa4d0af5e1b08084f04f09de6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_1f2d0c10e5a7b295b7beb83ee7e13b97.setIcon(icon_32262dfaa4d0af5e1b08084f04f09de6);
+        
+    
+            marker_1f2d0c10e5a7b295b7beb83ee7e13b97.bindTooltip(
+                `<div>
+                     Station: Fulton St & Rockwell Pl<br>Capacity: 31.0<br>Coordinates: (40.688226, -73.979382)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9bfff1134cc0d7139f31833328a73dc9 = L.marker(
+                [40.69196035, -73.96536851],
+                {}
+            ).addTo(marker_cluster_5b16161b8a2265443b91db5b5bdf83da);
+        
+    
+            var icon_f67eea1e527e55d13e9e314c8bc0f6d0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_9bfff1134cc0d7139f31833328a73dc9.setIcon(icon_f67eea1e527e55d13e9e314c8bc0f6d0);
+        
+    
+            marker_9bfff1134cc0d7139f31833328a73dc9.bindTooltip(
+                `<div>
+                     Station: Willoughby Ave & Hall St<br>Capacity: 31.0<br>Coordinates: (40.69196035, -73.96536851)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6a5c9edee86945083c141331e917f6cc = L.marker(
+                [40.71870987, -74.0090009],
+                {}
+            ).addTo(marker_cluster_5b16161b8a2265443b91db5b5bdf83da);
+        
+    
+            var icon_a50bf5a4b56c20034500e37d9cb45426 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_6a5c9edee86945083c141331e917f6cc.setIcon(icon_a50bf5a4b56c20034500e37d9cb45426);
+        
+    
+            marker_6a5c9edee86945083c141331e917f6cc.bindTooltip(
+                `<div>
+                     Station: Harrison St & Hudson St<br>Capacity: 27.0<br>Coordinates: (40.71870987, -74.0090009)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_123103f73f0d2b5eac2c53d67b46b155 = L.marker(
+                [40.69474881, -73.98362464],
+                {}
+            ).addTo(marker_cluster_5b16161b8a2265443b91db5b5bdf83da);
+        
+    
+            var icon_1749745648cd5aea96449d6231f8654e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_123103f73f0d2b5eac2c53d67b46b155.setIcon(icon_1749745648cd5aea96449d6231f8654e);
+        
+    
+            marker_123103f73f0d2b5eac2c53d67b46b155.bindTooltip(
+                `<div>
+                     Station: Johnson St & Gold St<br>Capacity: 27.0<br>Coordinates: (40.69474881, -73.98362464)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_622adfcc91ff29d27d1c50f7f998fc03 = L.marker(
+                [40.6917823, -73.9737299],
+                {}
+            ).addTo(marker_cluster_5b16161b8a2265443b91db5b5bdf83da);
+        
+    
+            var icon_02f7f3a3b626e1131f1190e430556277 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_622adfcc91ff29d27d1c50f7f998fc03.setIcon(icon_02f7f3a3b626e1131f1190e430556277);
+        
+    
+            marker_622adfcc91ff29d27d1c50f7f998fc03.bindTooltip(
+                `<div>
+                     Station: Washington Park<br>Capacity: 7.0<br>Coordinates: (40.6917823, -73.9737299)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d215689a9746bd739d58320a375ccbd4 = L.marker(
+                [40.70706456, -74.00731853],
+                {}
+            ).addTo(marker_cluster_5b16161b8a2265443b91db5b5bdf83da);
+        
+    
+            var icon_72f943f3bb3aabd5def0a51976f804ef = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_d215689a9746bd739d58320a375ccbd4.setIcon(icon_72f943f3bb3aabd5def0a51976f804ef);
+        
+    
+            marker_d215689a9746bd739d58320a375ccbd4.bindTooltip(
+                `<div>
+                     Station: Maiden Ln & Pearl St<br>Capacity: 27.0<br>Coordinates: (40.70706456, -74.00731853)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_fa23ba241ef59febfb806f897fbca801 = L.marker(
+                [40.72229346, -73.99147535],
+                {}
+            ).addTo(marker_cluster_5b16161b8a2265443b91db5b5bdf83da);
+        
+    
+            var icon_8a2b176e48ab568f2479577e8dfad72a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_fa23ba241ef59febfb806f897fbca801.setIcon(icon_8a2b176e48ab568f2479577e8dfad72a);
+        
+    
+            marker_fa23ba241ef59febfb806f897fbca801.bindTooltip(
+                `<div>
+                     Station: Stanton St & Chrystie St<br>Capacity: 35.0<br>Coordinates: (40.72229346, -73.99147535)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            marker_cluster_5b16161b8a2265443b91db5b5bdf83da.addTo(map_76f29795e97cac6c019cb837d491f8c3);
+        
+    
+            var layer_control_d5c4d0c56af28da96f456947b60fd7c6_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_86959319f13b7a96d7821efda1d75041,
+                },
+                overlays :  {
+                    "High-Density Taxi Zones" : marker_cluster_ff3e21223987e7572d36eb3fc9de7ac4,
+                    "Nearby CitiBike Stations" : marker_cluster_5b16161b8a2265443b91db5b5bdf83da,
+                },
+            };
+            let layer_control_d5c4d0c56af28da96f456947b60fd7c6 = L.control.layers(
+                layer_control_d5c4d0c56af28da96f456947b60fd7c6_layers.base_layers,
+                layer_control_d5c4d0c56af28da96f456947b60fd7c6_layers.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_76f29795e97cac6c019cb837d491f8c3);
+
+        
+    
+            tile_layer_86959319f13b7a96d7821efda1d75041.addTo(map_76f29795e97cac6c019cb837d491f8c3);
+        
+    
+            marker_cluster_ff3e21223987e7572d36eb3fc9de7ac4.addTo(map_76f29795e97cac6c019cb837d491f8c3);
+        
+    
+            marker_cluster_5b16161b8a2265443b91db5b5bdf83da.addTo(map_76f29795e97cac6c019cb837d491f8c3);
+        
+    
+            tile_layer_86959319f13b7a96d7821efda1d75041.addTo(map_76f29795e97cac6c019cb837d491f8c3);
+        
+    
+            marker_cluster_ff3e21223987e7572d36eb3fc9de7ac4.addTo(map_76f29795e97cac6c019cb837d491f8c3);
+        
+    
+            marker_cluster_5b16161b8a2265443b91db5b5bdf83da.addTo(map_76f29795e97cac6c019cb837d491f8c3);
+        
+</script>
+</html>
