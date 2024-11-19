@@ -100,11 +100,6 @@ Each aspect of this study is tackled in four distinct sub-projects:
 
 ---
 
-## 📜 License
-
-This project is open-source under the [MIT License](LICENSE). Contributions are welcome!
-
----
 
 ## 📬 Contact
 
